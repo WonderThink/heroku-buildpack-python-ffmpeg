@@ -41,9 +41,7 @@ source $BIN_DIR/utils
 APP_DIR='/app'
 TMP_APP_DIR=$CACHE_DIR/tmp_app_dir
 
-if [ ! -d $APP_DIR ]; then
-  mkdir $APP_DIR;
-fi;
+ls -lash $CACHE_DIR
 
 # Copy Anvil app dir to temporary storage...
 mkdir -p $TMP_APP_DIR

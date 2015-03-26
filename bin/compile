@@ -94,6 +94,7 @@ mkdir -p $CACHE_DIR
 
 # Restore old artifacts from the cache.
 for dir in $CACHED_DIRS; do
+  echo $dir
   cp -R $CACHE_DIR/$dir . &> /dev/null || true
 done
 
@@ -171,6 +172,8 @@ source $BIN_DIR/steps/collectstatic
 
 # Store new artifacts in cache.
 for dir in $CACHED_DIRS; do
+  echo $CACHED_DIRS
+  echo $dir
   rm -rf $CACHE_DIR/$dir
   cp -R $dir $CACHE_DIR/
 done

@@ -41,12 +41,12 @@ source $BIN_DIR/utils
 APP_DIR='/app'
 TMP_APP_DIR=$CACHE_DIR/tmp_app_dir
 
-ls -lash $CACHE_DIR
-
 # Copy Anvil app dir to temporary storage...
+echo '1'
 mkdir -p $TMP_APP_DIR
+echo '2'
 deep-mv $APP_DIR $TMP_APP_DIR
-
+echo '3'
 # Copy Application code in.
 deep-mv $BUILD_DIR $APP_DIR
 
